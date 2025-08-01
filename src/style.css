@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Pompiere&display=swap');
+@import "tailwindcss";
+
+:root {
+  background: hsl(0 0% 0%);
+  color: white;
+}
+
+#app {
+  font-family: 'Google Sans Code', monospace;
+  margin: 0 auto;
+  max-width: 1440px;
+}
