@@ -1,14 +1,14 @@
 import ProjectList from "../components/ProjectList/ProjectList";
-import headManager from "../hooks/head-manager";
+import headManager from "../hooks/headManager";
 
 headManager({
   title: "Mike Angelo — Designer, Editor, and Web Developer.",
   description: "Designer, Editor, and Web Developer.",
 });
 
-const structure = [ProjectList()];
+export default async function Home() {
+  const structure = [await ProjectList()];
 
-export default function Home() {
   const el = document.createElement("main");
   for (let item of structure) {
     el.appendChild(item);

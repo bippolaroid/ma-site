@@ -2,7 +2,9 @@
 @import "tailwindcss";
 
 :root {
-  background: hsl(0 0% 0%);
+  background: url("./patagonia.jpg");
+  background-color: hsl(0, 0%, 30%);
+  background-blend-mode: color-burn;
   color: white;
 }
 

@@ -1,25 +1,21 @@
+import fetchData, { type ProjectData } from "../../hooks/fetchData";
 import ProjectCell from "../ProjectCell/ProjectCell";
 
-type ProjectData = {
-  id: number;
-  client: string;
-  client_logo: string;
-  title: string;
-  tags: string[];
-  featured: string;
-  last_modified: string;
-};
+export default async function ProjectList() {
+  const data: ProjectData[] = await fetchData();
 
-let data: ProjectData[] = await fetch(
-  "https://cdn.mikeangelo.art/projects.json"
-).then((res) => res.json());
-
-export default function ProjectList() {
   const el = document.createElement("div");
-  el.className =
-    "w-full border border-neutral-900 p-3 rounded grid md:grid-cols-3 lg:grid-cols-4 gap-3";
+  el.className = "w-full px-3 grid lg:grid-cols-3 md:grid-cols-2 gap-3";
   for (var item of data) {
-    el.appendChild(ProjectCell({ title: item.title, featured: item.featured, tags: item.tags }));
+    el.appendChild(
+      ProjectCell({
+        id: item.id,
+        title: item.title,
+        client: item.client,
+        src: item.featured,
+        tags: item.tags,
+      })
+    );
   }
   return el;
 }
