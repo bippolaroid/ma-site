@@ -1,33 +1,17 @@
 function Logo() {
   const el = document.createElement("div");
-  el.className = "w-fit flex gap-3";
+  el.className =
+    "grid border-b text-neutral-300 border-neutral-900 p-6 items-center lg:justify-center";
+  el.textContent = "MIKE ANGELO";
 
-  const img = document.createElement("img");
-  img.src = "./logo.png";
-
-  const mark = document.createElement("a");
-  mark.href = "./";
-  mark.textContent = "Mike Angelo";
-
-  el.appendChild(img);
-  el.appendChild(mark);
-
-  return el;
-}
-
-function Menu() {
-  const el = document.createElement("div");
-  const link = document.createElement("a");
-  link.href = "./project?id=0";
-  link.text = "Contact";
-  el.appendChild(link);
   return el;
 }
 
 export default function Nav() {
   const el = document.createElement("nav");
-  el.className = "w-full px-3 py-6 flex justify-between";
+  el.className = "lg:w-[15%] lg:fixed";
+
   el.appendChild(Logo());
-  el.appendChild(Menu());
+
   return el;
 }

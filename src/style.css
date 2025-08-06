@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 :root {
-  background: url("./patagonia.jpg");
-  background-color: hsl(0, 0%, 30%);
-  background-blend-mode: color-burn;
+  background-color: hsl(223 30% 5%);
+  background: linear-gradient(135deg, rgba(6 6 6 / 1), rgba(12 12 12 / 0.9) 100%),
+  linear-gradient(-135deg, rgba(6 6 6 / 1), rgba(12 12 12 / 0.9) 100%);
   color: white;
 }
 
@@ -13,3 +13,9 @@
   margin: 0 auto;
   max-width: 1440px;
 }
+
+.second {
+    @media (width >= 64rem) {
+      margin-left: calc(15% + 5.25rem);
+    }
+  }
