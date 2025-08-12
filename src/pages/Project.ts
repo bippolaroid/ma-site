@@ -1,7 +1,4 @@
-import headManager from "../hooks/headManager";
 import ProjectHTML from "./Project.html?raw";
-
-headManager({ title: "Project", description: "Description" });
 
 export default async function ProjectPage() {
 

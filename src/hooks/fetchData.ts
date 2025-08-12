@@ -3,9 +3,7 @@ export type ProjectData = {
   client: string;
   client_logo: string;
   title: string;
-  tags: string[];
   featured: string;
-  last_modified: string;
 };
 
 export default async function fetchData() {
